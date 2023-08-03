@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package currency;
+
+message ConvertRequest {
+    string from_currency = 1;
+    string to_currency = 2;
+    float amount = 3;
+}
+
+message ConvertResponse {
+    float converted_amount = 1;
+}
+
+service CurrencyConverter {
+    rpc Convert(ConvertRequest) returns (ConvertResponse);
+}
+
+// Supported currency codes
+enum CurrencyCode {
+    USD = 0;
+    EUR = 1;
+    JPY = 2;
+    // Add more supported currency codes here
+  }
