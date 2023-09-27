@@ -12,7 +12,7 @@ const client = new currencyProto.CurrencyConverter(
   "localhost:50051",
   grpc.credentials.createInsecure()
   );
-console.log("Client Connected.")
+console.log("Client Connected..")
 
 // Function to convert currency
 function convertCurrency(fromCurrency, toCurrency, amount) {
